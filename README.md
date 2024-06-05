@@ -39,11 +39,8 @@ Se encuentran almacenadas las funciones de automatizacion de las solicitudes de 
 ```
 def get_user_token():
     user_token = post_new_user(data.user_body)
-    print(user_token)
     user_json = user_token.json()
-    print(user_json)
     auth_token = user_json['authToken']
-    print(auth_token)
     return auth_token
 ```
  
@@ -63,11 +60,12 @@ print(response.json())
 
 
 #### _Create_kit_name_kit:_
-* En la prueba positiva de automatizacion de los kits utilizamos la funcion **def** con el metodo de comprobacion **positive_assert**.
+* En la prueba positiva de automatizacion de los kits utilizamos la funcion **def** con el metodo de comprobacion **positive_assert**. 
 ```
 def positive_assert(kit_body):
     kit_response = sender_stand_request.post_new_client_kit(kit_body)
     assert kit_response.status_code == 201
+    assert response.json()["name"] != ""
 ```
 
 * En la prueba negativa de automatizacion de los kits utilizamos la funcion **def** con el metodo de comprobacion **negative_assert**. Con sus respectivos mensajes de error. 
@@ -84,7 +82,32 @@ def negative_assert_symbol(kit_body):
 ```
 def test_create_1_character_new_kit_body_get_success_response():
     positive_assert(data.kit1)
+    
+def test_create_511_character_new_kit_body_get_success_response():
+    positive_assert(data.kit2)
+
+def test_create_0_character_new_kit_body_get_error_response():
+    negative_assert_symbol(data.kit3)
+    
+def test_create_512_new_kit_body_error_response():
+    negative_assert_symbol(data.kit4)
+    
+def test_create_special_character_new_kit_body_get_success_response():
+    positive_assert(data.kit5)
+
+def test_create_space_new_kit_body_get_success_response():
+    positive_assert(data.kit6)
+    
+def test_create_number_new_kit_body_get_success_response():
+    positive_assert(data.kit7)
+    
+def test_create_not_params_new_kit_body_get_error_response():
+    negative_assert_symbol(data.kit8)
+    
+def test_create_number_new_kit_body_get_error_response():
+    negative_assert_symbol(data.kit9)    
 ```
+
 Para realizar la pruebas de automatizacion es necesario modificar el nombre de la prueba a manera explicatica del caso, usando el metodo snake.  Y la variable **(kit_body)** en el metodo **assert** que se encuentra en el archivo Data.
 
 * Las pruebas positivas dieron un 100% de eficacia. De manera contraria sucede con las pruebas negativas,

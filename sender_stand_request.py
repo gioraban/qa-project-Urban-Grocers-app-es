@@ -11,11 +11,8 @@ def post_new_user(body):
 
 def get_user_token():
     user_token = post_new_user(data.user_body)
-    print(user_token)
     user_json = user_token.json()
-    print(user_json)
     auth_token = user_json['authToken']
-    print(auth_token)
     return auth_token
 
 
