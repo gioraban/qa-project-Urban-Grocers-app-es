@@ -2,18 +2,20 @@ import sender_stand_request
 import data
 
 
-def positive_assert(kit_body):
+def positive_assert(kit_body): #Funcion de comprobacion positiva
     response = sender_stand_request.post_new_client_kit(kit_body)
     assert response.status_code == 201
-    assert response.json()["name"] != ""
+    assert response.json()["name"] == kit_body["name"]
 
 
-def negative_assert_symbol(kit_body):
+def negative_assert_symbol(kit_body): #Funcion de comprobacion negativa
     response = sender_stand_request.post_new_client_kit(kit_body)
     assert response.status_code == 400
     assert response.json()["code"] == 400
     assert response.json()["message"] == "No se han aprobado todos los parámetros requeridos. " \
                                          "El nombre debe contener sólo letras latino, un espacio y un guión. De 2 a 15 caracteres"
+
+#lista de la prueba de comprobacion positivas y negativas de la variante "name"
 
 
 def test_create_1_character_new_kit_body_get_success_response():

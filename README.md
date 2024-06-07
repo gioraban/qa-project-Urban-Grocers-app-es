@@ -2,10 +2,22 @@
 
 En este proyecto se trata de automatizar la lista de comprobacion del campo **name**  en la solicitud de creacion de un kit de productos. Para ello se necesita crear primero un usurio.
 
-El primer paso es instalar en Pychart pip, piptest, request,  intalacion?
+El primer paso es instalar en Pychart pip, piptest, request.
 Segundo paso, enlazar la cuenta de GitHub Desktop a la plataforma de Tripleten a traves de la API que aparece en la entregada del proyecto Sprint 7.
-Luego, ve a GitHub y clona el nombre del repositorio **qa-project-Urban-Grocers-app-es**  a la computadora local con:
-`git clone git@github.com:username/qa-project-Urban-Grocers-app-es.git`
+Luego, ve a GitHub y clona el nombre del repositorio **qa-project-Urban-Grocers-app-es**  a la computadora local con los siguientes pasos:
+
+1. Abre la linea de comandos en tu computadora.
+2. Crea un directorio para almacenar todos tus proyestos:
+
+     `cd~`
+
+     `mkdir projects`
+
+      `cd projects`
+
+ 3. Clona el repositorio con SSh
+
+    `git clone git@github.com:username/qa-project-Urban-Grocers-app-es.git`
 
 Inicialmente, abre y lee la documetacion del API de "Urban Grocers".  Toda la documentacion necesaria se encuentra en el archivo Configuration. 
 En el archivo Data se encuentra el diccionario para poder implementar las funciones necesarias en el archivo Sender_Stand_Request.
