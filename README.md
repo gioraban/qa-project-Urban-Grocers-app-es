@@ -5,7 +5,7 @@ En este proyecto se trata de automatizar la lista de comprobacion del campo **na
 El primer paso es instalar en Pychart pip, piptest, request.
 Segundo paso, enlazar la cuenta de GitHub Desktop a la plataforma de Tripleten a traves de la API que aparece en la entregada del proyecto Sprint 7.
 Luego, ve a GitHub y clona el nombre del repositorio **qa-project-Urban-Grocers-app-es**  a la computadora local con los siguientes pasos:
-
+ 
 1. Abre la linea de comandos en tu computadora.
 2. Crea un directorio para almacenar todos tus proyestos:
 
