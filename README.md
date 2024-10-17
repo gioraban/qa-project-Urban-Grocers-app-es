@@ -130,4 +130,14 @@ La prueba 4 deberia de dar como resultado un error 400 pero el actual es un 201 
 La prueba 8 deberia de dar como resultado un error 400 pero el actual es un 500.
 La prueba 9 deberia de dar como resultado un error 400 pero el actual es un 201 creando el kit.
 
+### Conclusión del Proyecto Urban Grocers
+
+En el proyecto Urban Grocers, se automatizó la creación de kits de productos, comenzando por la creación de un usuario. Para ello, se utilizó Python y varias bibliotecas, incluyendo `requests`.
+
+El proyecto está estructurado en tres archivos principales: **Configuration**, que contiene la URL del servidor y los endpoints necesarios; **Data**, que define los parámetros requeridos para crear usuarios y kits en formato JSON; y **Sender_stand_request**, que implementa las funciones de automatización para las solicitudes.
+
+Se realizaron pruebas tanto positivas como negativas para asegurar el correcto funcionamiento del proceso. Las pruebas positivas lograron un 100% de eficacia, mientras que las pruebas negativas revelaron errores en ciertos casos, indicando que el sistema no maneja adecuadamente algunos escenarios de validación.
+
+El uso de herramientas como Postman también permitió verificar los resultados de las pruebas, confirmando la necesidad de realizar ajustes en la API para mejorar su rendimiento y la gestión de errores.
+
 ![img_1.png](img_1.png)
